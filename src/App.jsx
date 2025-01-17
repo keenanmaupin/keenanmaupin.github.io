@@ -25,7 +25,7 @@ function App() {
         <main className="main-content">
           <div className="card-container">
             <Routes>
-              <Route path="/" element={<Card><Home /></Card>} />
+              <Route path="*" element={<Card><Home /></Card>} />
               <Route path="/about" element={<Card><About /></Card>} />
               <Route path="/portfolio" element={<Card><Portfolio /></Card>} />
               <Route path="/cooking" element={<Card><Cooking /></Card>} />
@@ -34,16 +34,18 @@ function App() {
               <Route path="/running" element={<Card><Running /></Card>} />
               <Route path="/working" element={<Card><Working /></Card>} />
               <Route path="/contact" element={<Card><Contact /></Card>} />
-              <Route path="*" element={<Card>Page Not Found</Card>} />
+              {/* <Route path="*" element={<Card>Page Not Found</Card>} /> */}
             </Routes>
           </div>
         </main>
+
+   
 
         {/* Footer */}
         <footer className="footer">
           <p>
             &copy; 2024 "Don't Be Shy, Stop On By"
-            <p>
+            </p>
               <a href="https://github.com/keenanmaupin" id='Github'>
               <Tooltip 
               anchorSelect = '#Github'
@@ -62,9 +64,6 @@ function App() {
               content = 'Resume-G-Drive' />
                 <img src="https://cdn3.emoji.gg/emojis/3185-minecraftfire.gif" width="64px" height="64px" alt="Minecraftfire" />
               </a>
-            </p>
-            <hr />
-          </p>
         </footer>
       </div>
     </Router>
